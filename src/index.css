@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&family=Yanone+Kaffeesatz:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.aaa-wrapper {
+  @apply max-w-screen-aaa w-full lg:px-12 px-4 mx-auto;
+}
+
+.nav-link {
+  @apply px-4 py-2 font-normal text-gray-700 flex items-center w-full border-l-4  hover:bg-green-100 hover:border-l-4 hover:border-green-normal;
+}
+
+.active-nav-link {
+  @apply bg-green-100 border-l-4 border-green-normal;
+}
+
+.movile-menu-link {
+  @apply block px-3 py-2 rounded-md text-base font-bold hover:bg-gray-700 text-white;
+}
+
+@layer components {
+  .aaa-input {
+    @apply relative cursor-pointer appearance-none border border-[#84DCAA] transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-10 before:w-10 before:-translate-y-2/4 before:-translate-x-2/4 before:opacity-0 before:transition-opacity checked:before:bg-[#84DCAA] hover:before:opacity-10 before:rounded-full;
+  }
+}
+
+.aaa-sidebar {
+  overscroll-behavior: contain;
+  /* scrollbar-width: none; */
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+}
+
+/* react-carousel-minimal customization by force */
+#thumbnail-div {
+  /* justify-content: center; */
+  scrollbar-width: none;
+  overflow-y: scroll;
+  margin-top: 30px;
+}
+
+.thumbnail {
+  border: transparent solid 2.5px;
+  border-radius: 14px;
+}
+
+.active-thumbnail {
+  border: #0ebb59 solid 2.5px;
+}
+
+.thumbnails img {
+  object-fit: cover !important;
+  min-width: 234px;
+  height: 150px;
+}
+
+/* react-date-range picker customization by force */
+.rdrDateDisplay {
+  display: none !important;
+}
+
+.rdrMonthsVertical {
+  flex-direction: row;
+}
+
+.rdrMonth {
+  width: 100%;
+}
+
+/* tailwind-custom-date-picker */
+.tailwind-custom-date-picker > div {
+  z-index: 100;
+}
+
+@media screen and (max-width: 600px) {
+  .thumbnail {
+    border: transparent solid 2px;
+  }
+  .active-thumbnail {
+    border: #0e9749 solid 2px;
+  }
+
+  .rdrMonthsVertical {
+    flex-direction: column;
+  }
+  /* tailwind custom date picker for search input */
+  .tailwind-custom-date-picker > div {
+    width: 92% !important;
+  }
+}
+
+/* .aaa-sidebar::-webkit-scrollbar {
+display: none;
+} */
+/* hide spin button from double range slider */
+.range-input[type="number"]::-webkit-inner-spin-button,
+.range-input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.range-input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* register page phone material phone number input filed css overrite */
+.css-l4u8b9-MuiInputBase-root-MuiInput-root::after {
+  border: 0 !important;
+  outline: none !important;
+}
+.css-l4u8b9-MuiInputBase-root-MuiInput-root::before {
+  border: 0 !important;
+  outline: none !important;
+}
+.css-12rx5qu::after {
+  border: none !important;
+}
+
+.css-12rx5qu:hover:not(.Mui-disabled, .Mui-error)::before {
+  border-bottom: none !important;
+}
+
+.css-12rx5qu::before {
+  border-bottom: none !important;
+}
+
+/* edit user profile modal close button */
+.modal-close-btn:hover::before {
+  transform: scaleX(1.021) scaleY(1.041);
+}
+
+.modal-close-btn::before {
+  transform: scale(0.7);
+  transition: all 0.2s ease;
+}
+
+.modal-close-btn::before {
+  content: "";
+  transition: transform 0.2s cubic-bezier(0.345, 0.115, 0.135, 1.42),
+    0.15s ease-out;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 9999px;
+}
+
+/* user profile setting icon rotating */
+.gear-icon > path {
+  stroke: white;
+}
+@keyframes gearrotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* chrome scrollbar css property */
+.chrome-scrollbar::-webkit-scrollbar {
+  width: 0px;
+  /* height: 12px; */
+  /* background: #000; */
+}
+
+/* ::-webkit-scrollbar-thumb {
+  background: #393812;
+  -webkit-border-radius: 1ex;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+  background: #000;
+} */
+
+/* map plus minus button */
+
+/* .leaflet-top {
+  z-index: 400 !important;
+}
+
+.leaflet-left {
+  z-index: 400 !important;
+}
+
+.swal2-title {
+  font-size: 16px !important;
+} */
+
+.swal2-confirm {
+  background-color: #0e9749 !important;
+  padding-left: 38px;
+  padding-right: 38px;
+}
